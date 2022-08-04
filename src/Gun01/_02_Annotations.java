@@ -28,7 +28,7 @@ public class _02_Annotations {
         System.out.println("Her class dan SONRA çalışacak : After Class"); }
 
     @Test
-    void test1(){  System.out.println("Test 1 çalıştı"); }  // Bunların (Testler) içinde hep Assert olacak ki, test sonucunu bize doğru bi şekilde versin.
+    void test1(){  System.out.println("Test 1 çalıştı"); }  //  Bunların (Testler) içinde hep Assert olacak ki, test sonucunu bize doğru bi şekilde versin.
     @Test
     void test2(){  System.out.println("Test 2 çalıştı"); }
 
