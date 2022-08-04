@@ -13,7 +13,8 @@ public class _02_Annotations {
      */
 
     @BeforeClass
-    void beforeClass(){System.out.println("Her class dan ÖNCE çalışacak : Before Class");}
+    void beforeClass(){System.out.println("Her class dan ÖNCE çalışacak : Before Class");
+        System.out.println("----------------------------------------------------");}
 
     @BeforeMethod
     void beforeMethod(){  System.out.println("Her test method dan ÖNCE çalışacak : Before Method"); }
@@ -22,15 +23,13 @@ public class _02_Annotations {
     void afterMethod(){  System.out.println("Her test method dan SONRA çalışacak : After Method"); }
 
     @AfterClass
-    void afterClass(){ System.out.println("Her class dan SONRA çalışacak : After Class"); }
+    void afterClass(){
+        System.out.println("--------------------------------------------------------");
+        System.out.println("Her class dan SONRA çalışacak : After Class"); }
 
     @Test
-    void test1(){  System.out.println("Test 1 çalıştı"); }
+    void test1(){  System.out.println("Test 1 çalıştı"); }  // Bunların (Testler) içinde hep Assert olacak ki, test sonucunu bize doğru bi şekilde versin.
     @Test
     void test2(){  System.out.println("Test 2 çalıştı"); }
-
-
-
-
 
 }
