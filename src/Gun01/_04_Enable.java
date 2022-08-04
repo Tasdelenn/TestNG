@@ -20,7 +20,7 @@ public class _04_Enable {
         System.out.println("test 1");
     }
 
-    @Test(enabled = false)
+    @Test(enabled = false)  // Diyelim ki test2 y, geç,c, olarak devre dışı yapmak istiyoruz...
     void test2(){
         System.out.println("test 2");
     }
@@ -32,6 +32,7 @@ public class _04_Enable {
 
     public static WebDriver driver;
     public static WebDriverWait wait;
+
     @BeforeClass
     void BaslangicIslemleri(){
         System.out.println("Driver start ....");
