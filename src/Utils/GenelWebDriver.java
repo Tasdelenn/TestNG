@@ -17,7 +17,7 @@ public class GenelWebDriver {
 
     public static WebDriver driver;
     public static WebDriverWait wait;
-    @BeforeClass
+    @BeforeClass    // Buradaki işlemler driver açma url işlemleri olduğu için @before A aldık. Yani login den bile önce sonuçta...
     public void BaslangicIslemleri(){
         System.out.println("Driver start ....");
         Logger logger = Logger.getLogger("");
@@ -51,7 +51,7 @@ public class GenelWebDriver {
         loginBtn.click();
     }
 
-    @AfterClass
+    @AfterClass // Test le işimiz bittiği zaman ne yapılmasını istiyoruz? Onu da buraya @after A aldık.
     public void BitisIslemleri(){
         System.out.println("Driver stop ....");
         try {
