@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suit 1">   <!--  Tüm testleri kapsayan bölüm  -->
+    <test name="Test 1">    <!--  Test 1 i kapsayan bölüm  -->
+        <classes>   <!--  Çalışacak tüm sınıfları kapsayan bölüm  -->
+            <class name="Gun04._002_Intro"> </class>    <!--  Buradaki akış sırası değil, paket içindeki class alfabetik isim sırasına göre gidiyo.  -->
+            <class name="Gun04._01_Intro"> </class>
+
+        </classes>
+    </test>
+
+    <test name="Test 2">    <!--  Test 1 i kapsayan bölüm  -->
+        <classes>   <!--  Çalışacak tüm sınıfları kapsayan bölüm  -->
+            <class name="Gun04._002_Intro"> </class>
+        </classes>
+    </test>
+</suite>
