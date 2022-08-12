@@ -17,7 +17,7 @@ public class GenelWebDriver {
 
     public static WebDriver driver;
     public static WebDriverWait wait;
-    @BeforeClass    // Buradaki işlemler driver açma url işlemleri olduğu için @before A aldık. Yani login den bile önce sonuçta...
+    @BeforeClass
     public void BaslangicIslemleri(){
         System.out.println("Driver start ....");
         Logger logger = Logger.getLogger("");
@@ -32,7 +32,7 @@ public class GenelWebDriver {
         wait=new WebDriverWait(driver, Duration.ofSeconds(30));
 
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30)); // sadece ana sayfa yüklenirken en başta
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30)); // bütün webElement için geçerli
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5)); // bütün webElement için geçerli
 
         driver.get("http://opencart.abstracta.us/index.php?route=account/login");
 
@@ -51,7 +51,7 @@ public class GenelWebDriver {
         loginBtn.click();
     }
 
-    @AfterClass // Test le işimiz bittiği zaman ne yapılmasını istiyoruz? Onu da buraya @after A aldık.
+    @AfterClass
     public void BitisIslemleri(){
         System.out.println("Driver stop ....");
         try {

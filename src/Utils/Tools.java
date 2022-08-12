@@ -16,19 +16,32 @@ public class Tools {
 
     public static void successMessageValidation()
     {
-        WebElement YesilYaziDogrl= GenelWebDriver.driver.findElement
+        WebElement YeşilYazıDogrl= GenelWebDriver.driver.findElement
  (By.xpath("//*[@class='alert alert-success alert-dismissible']"));
-        Assert.assertTrue(YesilYaziDogrl.getText().toLowerCase().contains("success"));
+        Assert.assertTrue(YeşilYazıDogrl.getText().toLowerCase().contains("success"));
     }
-
 
     public static void Bekle(int saniye)
     {
+
         try {
             Thread.sleep(saniye*1000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+
     }
+
+    public static double WebElementToDouble(WebElement e) {
+        String result=e.getText();
+        result=result.replaceAll("[^\\d]","");
+        return Double.parseDouble(result);
+    }
+
+    public static int RandomGenerator(int max)
+    {
+         return  (int)(Math.random() * max);  //max 4 =>  0 1 2 3
+    }
+
 
 }
