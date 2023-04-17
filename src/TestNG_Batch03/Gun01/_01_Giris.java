@@ -1,4 +1,4 @@
-package Gun01;
+package TestNG_Batch03.Gun01;
 
 import org.testng.annotations.Test;
 
